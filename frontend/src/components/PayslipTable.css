@@ -1,0 +1,132 @@
+.payslip-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.payslip-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.payslip-card__title {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.payslip-card__link {
+  border: none;
+  background: transparent;
+  color: var(--teal-600);
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.payslip-card__link:hover {
+  color: var(--teal-700);
+  text-decoration: underline;
+}
+
+.payslip-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payslip-table thead th {
+  text-align: left;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0 0 var(--space-2);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.payslip-table thead th:nth-child(2) {
+  text-align: right;
+}
+
+.payslip-table tbody td {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 13.5px;
+}
+
+.payslip-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.payslip-table__period {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.payslip-table__amount {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.payslip-table__amount-value {
+  display: inline-block;
+  min-width: 60px;
+}
+
+.payslip-table__reveal {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: var(--space-2);
+  padding: 2px;
+  border-radius: var(--radius-sm);
+  transition: color 0.12s ease, background 0.12s ease;
+}
+
+.payslip-table__reveal:hover {
+  color: var(--teal-700);
+  background: var(--bg-brand-subtle);
+}
+
+.payslip-table__status {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  border-radius: var(--radius-full);
+  background: var(--teal-50);
+  color: var(--teal-700);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.payslip-table td:last-child {
+  text-align: right;
+  width: 32px;
+}
+
+.payslip-table__download {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.payslip-table__download:hover {
+  background: var(--bg-brand-subtle);
+  border-color: var(--border-brand);
+  color: var(--teal-700);
+}

@@ -1,0 +1,162 @@
+.apply-leave {
+  max-width: 560px;
+}
+
+.apply-leave__form {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.apply-leave__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-4);
+  align-items: end;
+}
+
+.apply-leave__row--dates {
+  grid-template-columns: 1fr 1fr;
+}
+
+.apply-leave__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.apply-leave__field label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.apply-leave__field select,
+.apply-leave__field input[type="date"],
+.apply-leave__field textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.apply-leave__field select:focus,
+.apply-leave__field input[type="date"]:focus,
+.apply-leave__field textarea:focus {
+  outline: none;
+  border-color: var(--border-brand);
+  box-shadow: var(--shadow-focus);
+}
+
+.apply-leave__field select:disabled,
+.apply-leave__field input:disabled {
+  background: var(--bg-sunken);
+  color: var(--text-muted);
+}
+
+.apply-leave__field textarea {
+  resize: vertical;
+  min-height: 72px;
+  font-family: var(--font-body);
+}
+
+.apply-leave__field--checkbox {
+  padding-bottom: 9px;
+}
+
+.apply-leave__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.apply-leave__checkbox-label input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--teal-600);
+}
+
+.apply-leave__error {
+  font-size: 12px;
+  color: var(--red-600);
+}
+
+.apply-leave__file-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+
+.apply-leave__file-input:hover {
+  border-color: var(--border-brand);
+  background: var(--bg-brand-subtle);
+}
+
+.apply-leave__file-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.apply-leave__summary-text {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.apply-leave__confirmation {
+  padding: 12px 14px;
+  background: var(--teal-50);
+  color: var(--teal-700);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.apply-leave__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.apply-leave__submit {
+  border: none;
+  background: var(--teal-600);
+  color: var(--text-on-brand);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  transition: background 0.12s ease;
+}
+
+.apply-leave__submit:hover {
+  background: var(--teal-700);
+}
+
+@media (max-width: 560px) {
+  .apply-leave__row,
+  .apply-leave__row:has(#fromDate) {
+    grid-template-columns: 1fr;
+  }
+}
